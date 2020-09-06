@@ -7,20 +7,31 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="./js/ascii.js"></script>
     <script src="./js/reader.js"></script>
-    <title>*chan reader!</title>
+    <title>Stats Page</title>
   </head>
   <body>
-    <div class="header">
-      <h1 name="animated_ascii">⣾</h1>
-      <h1>*chan reader!</h1>
-      <h1 name="animated_ascii">⣾</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+      <h1>Stats Page</h1>
     </div>
+    <!-- Main content -->
     <div class="container">
-      <div class="panel">...</div>
-      <div class="panel">...</div>
-    </div>
-    <div class="container">
-      <div class="panel" id="main_content"></div>
+      <div class="panel search">
+        Type the name of the board you want to get stats from (ex.: x for /x/):
+        <input
+          class="board-input"
+          placeholder="Board name..."
+          id="board_input"
+        />
+        <button
+          onclick="getBoard(document.getElementById('board_input').value)"
+        >
+          Get
+        </button>
+      </div>
+      <div class="container">
+        <div class="panel" id="main_content">Stats will show up here...</div>
+      </div>
     </div>
   </body>
 </html>
